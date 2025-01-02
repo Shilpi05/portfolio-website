@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 
 :root {
@@ -71,7 +71,7 @@ a{
 
   /* gap: 2rem; */
   margin: 4rem auto;
-  padding: 0 11rem;
+  padding: 0 0.4rem;
   padding-bottom: 8rem;
 
 }
@@ -82,7 +82,7 @@ a{
   color: rgb(231, 231, 231);
 
   bottom: -17.5%;
-  left: 9%;
+  left: 0;
   font-weight: bold;
   transition: all 3s;
 }
@@ -509,4 +509,73 @@ margin-top: 1rem;
     .project-card:hover .project-content{
       scale:0.55;
     }
+}
+
+.skill-container{
+  position: relative;
+  display: flex;
+  padding: 5rem;
+  margin: 10rem auto;
+  gap: 30px; 
+}
+
+.skill-container-left{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.skill-container-right{
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  gap: 2rem;
+}
+.skill-faded-text{
+  position: absolute;
+    user-select: none;
+    font-size: 7em;
+    color: rgb(231, 231, 231);
+    bottom: -34.5%;
+    right: -5%;
+    font-weight: bold;
+}
+
+.blob-style{
+  position: absolute;
+  top: 25%;
+  left: 15%;
+  animation: blobAnimate 4s linear infinite;
+  z-index: -5;
+}
+
+@keyframes blobAnimate {
+  50%{
+    top: 30%;
+    left:20%;
+  }
+}
+
+.skill-logo{
+  width: 80px;
+}
+.skill-logo:hover{
+  transform: scale(1.2);
+}
+
+.skill-heading{
+  font-size: 50px;
+  font-style: bold;
+  color: var(--bgOrange);
+  line-height: 50px;
+}
+
+.caps{
+  font-size: 90px;
+}
+
+.skill-subheading{
+  margin-top: 1rem;
+  width: 85%;
+  text-align: justify;
 }
